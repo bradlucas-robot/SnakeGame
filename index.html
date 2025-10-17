@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>贪吃蛇游戏</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>贪吃蛇游戏</h1>
+            <div class="score-board">
+                <div class="score">得分: <span id="score">0</span></div>
+                <div class="high-score">最高分: <span id="highScore">0</span></div>
+            </div>
+        </header>
+
+        <main>
+            <div class="game-container">
+                <canvas id="gameCanvas" width="400" height="400"></canvas>
+                <div class="game-over" id="gameOver">
+                    <h2>游戏结束!</h2>
+                    <p>最终得分: <span id="finalScore">0</span></p>
+                    <button id="restartBtn" class="btn">重新开始</button>
+                </div>
+                <div class="start-screen" id="startScreen">
+                    <h2>贪吃蛇游戏</h2>
+                    <p>使用方向键控制蛇的移动</p>
+                    <button id="startBtn" class="btn">开始游戏</button>
+                </div>
+            </div>
+
+            <div class="controls">
+                <h3>游戏控制</h3>
+                <div class="control-buttons">
+                    <div class="control-row">
+                        <button class="control-btn" data-direction="up">↑</button>
+                    </div>
+                    <div class="control-row">
+                        <button class="control-btn" data-direction="left">←</button>
+                        <button class="control-btn" data-direction="down">↓</button>
+                        <button class="control-btn" data-direction="right">→</button>
+                    </div>
+                </div>
+                <p class="control-hint">使用键盘方向键或点击按钮控制</p>
+            </div>
+
+            <div class="speed-control">
+                <h3>游戏速度</h3>
+                <div class="speed-container">
+                    <label for="speedSlider">速度调节:</label>
+                    <input type="range" id="speedSlider" min="1" max="10" value="5" class="speed-slider">
+                    <span id="speedValue" class="speed-value">5</span>
+                </div>
+                <div class="speed-buttons">
+                    <button class="speed-btn" data-speed="1">慢速</button>
+                    <button class="speed-btn" data-speed="5">中速</button>
+                    <button class="speed-btn" data-speed="10">快速</button>
+                </div>
+                <p class="speed-hint">拖动滑块或点击按钮调节速度</p>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 贪吃蛇游戏</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
